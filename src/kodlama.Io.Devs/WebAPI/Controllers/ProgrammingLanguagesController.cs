@@ -44,5 +44,12 @@ namespace WebAPI.Controllers
             ProgrammingLanguageListModel result = await Mediator.Send(getListProgrammingLanguageQuery);
             return Ok(result);
         }
+
+        [HttpGet("{Id}")]
+        public async Task<IActionResult> GetList([FromRoute] GetByIdProgrammingLanguageQuery query)
+        {
+            ProgrammingLanguageGetByIdDto result = await Mediator.Send(query);
+            return Ok(result);
+        }
     }
 }

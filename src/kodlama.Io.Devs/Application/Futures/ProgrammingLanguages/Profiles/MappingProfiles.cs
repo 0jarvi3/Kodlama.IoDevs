@@ -26,5 +26,7 @@ public class MappingProfiles : Profile
         CreateMap<ProgrammingLanguage, DeleteProgrammingLanguageCommand>().ReverseMap();
         CreateMap<DeletedProgrammingLanguageDto,ProgrammingLanguage >().ReverseMap();
 
+        CreateMap<ProgrammingLanguage, ProgrammingLanguageGetByIdDto>().ReverseMap();
+
     }
 }
