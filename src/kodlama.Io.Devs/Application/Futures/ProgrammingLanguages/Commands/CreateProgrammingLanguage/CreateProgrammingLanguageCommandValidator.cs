@@ -8,6 +8,5 @@ public class CreateProgrammingLanguageCommandValidator : AbstractValidator<Creat
     {
         RuleFor(p => p.Name).NotEmpty();
         RuleFor(p => p.Name).MinimumLength(1);
-
     }
 }

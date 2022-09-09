@@ -17,6 +17,10 @@ public class ProgrammingLanguageBusinessRules
     public async Task ProgrammingLanguageNameCanNotBeDuplicatedWhenInserted(string name)
     {
         IPaginate<ProgrammingLanguage> result = await _programmingLanguageRepository.GetListAsync(p => p.Name == name);
-        if (result.Items.Any()) throw new BusinessException("Brand Name Exist");
+        if (result.Items.Any()) throw new BusinessException("Programming Language Name Exist");
+    }
+    public async Task ProgrammingLanguageShouldExistWhenRequested(ProgrammingLanguage programmingLanguage)
+    {
+        if (programmingLanguage == null) throw new BusinessException("Programming Language Does Not Exist");
     }
 }

@@ -16,8 +16,7 @@
 
 
 	<ItemGroup>
-	  <Folder Include="Futures\ProgrammingLanguages\Commands\CreateProgrammingLanguages\" />
-	  <Folder Include="Futures\ProgrammingLanguages\Dtos\" />
+	  <Folder Include="Futures\ProgrammingLanguages\Commands\DeleteProgrammingLanguage\" />
 	  <Folder Include="Futures\ProgrammingLanguages\Models\" />
 	  <Folder Include="Futures\ProgrammingLanguages\Rules\" />
 	  <Folder Include="Futures\ProgrammingLanguages\Queries\" />
@@ -26,6 +25,7 @@
 
 
 	<ItemGroup>
+	  <ProjectReference Include="..\..\corePackages\Core.Application\Core.Application.csproj" />
 	  <ProjectReference Include="..\..\corePackages\Core.CrossCuttingConcers\Core.CrossCuttingConcerns.csproj" />
 	  <ProjectReference Include="..\..\corePackages\Core.Persistence\Core.Persistence.csproj" />
 	  <ProjectReference Include="..\Domain\Domain.csproj" />
